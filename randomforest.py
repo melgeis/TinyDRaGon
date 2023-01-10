@@ -123,8 +123,8 @@ if __name__ == "__main__":
     y_test = test[test.columns[0]].to_numpy()
 
     num_workers = int(128*0.9)
-    num_trees = 80 #80
-    max_depth = 22 #23
+    num_trees = 100
+    max_depth = 46
     rf_model = TinyDRaGonRF(num_workers)
     rf_model.train(num_trees, max_depth, X,y)
     rf_model.save_model("test_model.pkl")

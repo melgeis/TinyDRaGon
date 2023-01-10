@@ -14,9 +14,9 @@ class Generator():
     def __init__(self) -> None:
         pass
 
-    def run(self, osm:str, elev:str, features:pd.DataFrame, target_path:str, save_images, file_object):
+    def run(self, osm:str, elev:str, features:pd.DataFrame, target_path:str, save_images):
         self.worker_instance = Worker() 
-        self.generate_datasamples(osm, elev, features, target_path, save_images, file_object)
+        self.generate_datasamples(osm, elev, features, target_path, save_images)
 
 
     def generate_datasamples(self, osm:str, elev:str, features:pd.DataFrame, target_path:str, save_images, file_object=None):
